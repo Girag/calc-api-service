@@ -155,11 +155,15 @@ curl -s -X POST http://localhost:8080/api/v1/calculate -H 'Content-Type: applica
 curl -s -X POST http://localhost:8080/api/v1/calculate -H 'Content-Type: application/json' -d '{"expression": "42/0"}'
 ```
 
+Ответ:
+
 ```json
 {"error":"division by zero"}%
 ```
 
 ### opening parenthesis missing (422)
+
+Запрос:
 
 ```bash
 curl -s -X POST http://localhost:8080/api/v1/calculate -H 'Content-Type: application/json' -d '{"expression": "2*33-4)"}'
